@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
+﻿using CustomExtensions;
+using System;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices;
 using System.Security;
 using System.Security.Cryptography;
 using System.Text;
-using CustomExtensions;
 
 namespace Cryptonite
 {
@@ -126,64 +122,6 @@ namespace Cryptonite
             }
 
             return decryptedBytes;
-        }    
-
-        //private static byte[] entropy = Encoding.Unicode.GetBytes("one sec on phone with chris");
-
-        //private static string EncryptSecureString(SecureString input)
-        //{
-        //    var encryptedData = ProtectedData.Protect(
-        //        Encoding.Unicode.GetBytes(ToInsecureString(input)),
-        //        entropy, DataProtectionScope.CurrentUser);
-
-        //    return Convert.ToBase64String(encryptedData);
-        //}
-
-        //private static SecureString DecryptSecureString(string encryptedData)
-        //{
-        //    try
-        //    {
-        //        var decryptedData = ProtectedData.Unprotect(
-        //            Convert.FromBase64String(encryptedData),
-        //            entropy, DataProtectionScope.CurrentUser);
-
-        //        return ToSecureString(Encoding.Unicode.GetString(decryptedData));
-        //    }
-        //    catch
-        //    {
-        //        return new SecureString();
-        //    }
-        //}
-
-        //private static SecureString ToSecureString(string input)
-        //{
-        //    var secure = new SecureString();
-
-        //    foreach (var c in input)
-        //    {
-        //        secure.AppendChar(c);
-        //    }
-
-        //    secure.MakeReadOnly();
-
-        //    return secure;
-        //}
-
-        //private static string ToInsecureString(SecureString input)
-        //{
-        //    string returnValue = string.Empty;
-        //    var ptr = Marshal.SecureStringToBSTR(input);
-
-        //    try
-        //    {
-        //        returnValue = Marshal.PtrToStringBSTR(ptr);
-        //    }
-        //    finally
-        //    {
-        //        Marshal.ZeroFreeBSTR(ptr);
-        //    }
-
-        //    return returnValue;
-        //}
+        }
     }
 }
